@@ -10,16 +10,15 @@ Alternatively, select portions of the filebeat-playbook.yml file may be used to 
 
   - _TODO: Enter the playbook file._
 
+# # Use command module
+# # - name: Install filebeat .deb
+# #    command: dpkg -i filebeat-7.4.0-amd64.deb
 
-    # Use command module
-  - name: Install filebeat .deb
-    command: dpkg -i filebeat-7.4.0-amd64.deb
-
-    # Use copy module
-  - name: Drop in filebeat.yml
-    copy:
-      src: /etc/ansible/files/filebeat-config.yml
-      dest: /etc/filebeat/filebeat.yml
+# # Use copy module
+# # - name: Drop in filebeat.yml
+#  #  copy:
+#  #    src: /etc/ansible/files/filebeat-config.yml
+#  #    dest: /etc/filebeat/filebeat.yml
 
 This document contains the following details:
 - Description of the Topologu
