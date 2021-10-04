@@ -9,14 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
----
-- name: Installing and Launch Filebeat
-  hosts: webservers
-  become: yes
-  tasks:
-    # Use command module
-  - name: Download filebeat .deb file
-    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+
 
     # Use command module
   - name: Install filebeat .deb
@@ -28,23 +21,6 @@ Alternatively, select portions of the filebeat-playbook.yml file may be used to 
       src: /etc/ansible/files/filebeat-config.yml
       dest: /etc/filebeat/filebeat.yml
 
-    # Use command module
-  - name: Enable and Configure System Module
-    command: filebeat modules enable system
-
-    # Use command module
-  - name: Setup filebeat
-    command: filebeat setup
-
-    # Use command module
-  - name: Start filebeat service
-    command: service filebeat start
-
-    # Use systemd module
-  - name: Enable service filebeat on boot
-    systemd:
-      name: filebeat
-      enabled: yes
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
@@ -91,7 +67,7 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses                       |
 |----------|---------------------|--------------------------------------------|
 | Jump Box | Yes                 | 71.62.134.105,10.0.0.5 & 10.0.0.6,10.1.0.4 |
-| LBalanc  | Yes                 | 71.62.134.105,                             |
+| Loadbal  | Yes                 | 71.62.134.105,                             |
 | ElkSRV   | Yes                 | 71.62.134.105,                             |
 
 ### Elk Configuration
