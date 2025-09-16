@@ -1,18 +1,4 @@
-## Automated ELK Stack Deployment
-
-The files in this repository were used to configure the network depicted below.
-
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
-https://github.com/Linconjoe/Lincoln-Project-Cyber/blob/main/Diagrams/Home%20work%20week%2012.drawio.pdf
-
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. 
-Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
-
-  - _TODO: Enter the playbook file._
-
-# # Use command module
-# # - name: Install filebeat .deb
-# #    command: dpkg -i filebeat-7.4.0-amd64.deb
+# #    command: dpkg -i filebeat-7.4.0-amd64.debA
 
 # # Use copy module
 # # - name: Drop in filebeat.yml
@@ -52,7 +38,6 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | web-2    | Server   | 10.0.0.6    | Linux            |
 
 ### Access Policies
-
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Loadbalancer machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
