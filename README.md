@@ -1,11 +1,3 @@
-# #    command: dpkg -i filebeat-7.4.0-amd64.debA
-
-# # Use copy module
-# # - name: Drop in filebeat.yml
-#  #  copy:
-#  #    src: /etc/ansible/files/filebeat-config.yml
-#  #    dest: /etc/filebeat/filebeat.yml
-
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
